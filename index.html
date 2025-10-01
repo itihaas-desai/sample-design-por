@@ -1,86 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SampleDesign — Vitrine</title>
-<style>
-/* ... same styles ... */
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SampleDesign — Vitrine</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 18px;
+    }
+    header nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+    header nav a:hover {
+      background: #f3f3f3;
+      color: #000;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+    .hero a {
+      text-decoration: none;
+      background: #ff5722;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .hero a:hover {
+      background: #e64a19;
+    }
+
+    section {
+      padding: 100px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+    section:nth-child(even) {
+      background: #fff;
+    }
+    section:nth-child(odd) {
+      background: #f4f4f4;
+    }
+    section .text {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+    section .text h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    section .text p {
+      line-height: 1.6;
+      color: #555;
+    }
+    section img {
+      flex: 1 1 400px;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    section img:hover {
+      transform: scale(1.03);
+    }
+
+    #contact {
+      text-align: center;
+    }
+    #contact p {
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 16px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-<header>
-<nav>
-<a href="#brand">Marca</a>
-<a href="#print">Impressão</a>
-<a href="#book">Livro</a>
-<a href="#sports">Esporte</a>
-<a href="#digital">Digital</a>
-<a href="#contact">Contato</a>
-</nav>
-</header>
+  <header>
+    <nav>
+      <a href="#brand">Marca</a>
+      <a href="#print">Impressão</a>
+      <a href="#book">Livro</a>
+      <a href="#sports">Esportes</a>
+      <a href="#digital">Digital</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
 
-<div class="hero">
-<h1>SampleDesign Vitrine</h1>
-<p>Soluções criativas em branding, impressão, livros, visuais esportivos e design digital.</p>
-<a href="#brand">Veja nosso trabalho</a>
-</div>
+  <div class="hero">
+    <h1>Vitrine SampleDesign</h1>
+    <p>Soluções criativas para branding, impressão, livros, design esportivo e digital.</p>
+    <a href="#brand">Explore nosso trabalho</a>
+  </div>
 
-<section id="brand">
-<div class="text">
-<h2>Design de Marca</h2>
-<p>Criamos identidades visuais fortes que ressoam com o público e destacam as marcas.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?..." alt="Brand Design">
-</section>
+  <section id="brand">
+    <div class="text">
+      <h2>Design de Marca</h2>
+      <p>Criamos identidades visuais fortes que ressoam com o público e destacam as marcas.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Brand Design">
+  </section>
 
-<section id="print">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?..." alt="Print Design">
-<div class="text">
-<h2>Design de Impressão</h2>
-<p>Brochuras, cartazes e campanhas chamativas projetadas para comunicar sua mensagem de forma eficaz.</p>
-</div>
-</section>
+  <section id="print">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Print Design">
+    <div class="text">
+      <h2>Design de Impressão</h2>
+      <p>Brochuras, pôsteres e campanhas criativos projetados para comunicar sua mensagem de forma eficaz.</p>
+    </div>
+  </section>
 
-<section id="book">
-<div class="text">
-<h2>Design de Livro</h2>
-<p>Da capa aos layouts elegantes, nossos designs de livros dão vida às histórias.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?..." alt="Book Design">
-</section>
+  <section id="book">
+    <div class="text">
+      <h2>Design de Livros</h2>
+      <p>De capas a layouts elegantes, nossos designs de livros dão vida às histórias.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Book Design">
+  </section>
 
-<section id="sports">
-<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?..." alt="Sports Design">
-<div class="text">
-<h2>Design Esportivo</h2>
-<p>Gráficos dinâmicos para equipes, eventos e campanhas esportivas que inspiram energia e entusiasmo.</p>
-</div>
-</section>
+  <section id="sports">
+    <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Sports Design">
+    <div class="text">
+      <h2>Design Esportivo</h2>
+      <p>Gráficos dinâmicos para equipes, eventos e campanhas esportivas que inspiram energia e entusiasmo.</p>
+    </div>
+  </section>
 
-<section id="digital">
-<div class="text">
-<h2>Design Digital</h2>
-<p>UI/UX moderno, sites e criativos para redes sociais feitos para engajar o público online.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?..." alt="Digital Design">
-</section>
+  <section id="digital">
+    <div class="text">
+      <h2>Design Digital</h2>
+      <p>UI/UX modernas, sites e criatividade para redes sociais projetados para engajar o público online.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60" alt="Digital Design">
+  </section>
 
-<section id="contact">
-<div class="text">
-<h2>Contato</h2>
-<p>Envie-nos um e-mail para <strong>hello@sampledesign.com</strong> ou conecte-se nas redes sociais.</p>
-</div>
-</section>
+  <section id="contact">
+    <div class="text">
+      <h2>Contato</h2>
+      <p>Envie um email para <strong>hello@sampledesign.com</strong> ou conecte-se conosco nas redes sociais.</p>
+    </div>
+  </section>
 
-<footer>
-<p>© 2025 SampleDesign. Todos os direitos reservados.</p>
-</footer>
+  <footer>
+    <p>© 2025 SampleDesign. Todos os direitos reservados.</p>
+  </footer>
 
-<button class="back-to-top" onclick="scrollToTop()">↑ Top</button>
-<script>
-window.addEventListener('scroll', ()=>{const btn=document.querySelector('.back-to-top');if(window.scrollY>300)btn.style.display='block';else btn.style.display='none';});
-function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
-</script>
+  <button class="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const btn = document.querySelector('.back-to-top');
+      btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
